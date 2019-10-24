@@ -26,7 +26,7 @@ public class CenterManagerEndpoint {
     @GET
     @Path("{id}")
     @Produces(MediaType.APPLICATION_JSON)
-    public Employee getLinie(@PathParam("id") Long id) {
+    public Employee getEmployee(@PathParam("id") Long id) {
         return em.find(Employee.class, id);
 
     }
