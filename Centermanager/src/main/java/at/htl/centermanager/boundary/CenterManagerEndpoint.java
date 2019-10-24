@@ -21,14 +21,14 @@ public class CenterManagerEndpoint {
 
     @PostConstruct
     public void init() {
-        System.out.println("FahrplanEndpoint created ***");
+        System.out.println("****  CenterManagerEP created ***");
     }
-
     @GET
     @Path("{id}")
     @Produces(MediaType.APPLICATION_JSON)
     public Employee getLinie(@PathParam("id") Long id) {
         return em.find(Employee.class, id);
+        
     }
 }
 
