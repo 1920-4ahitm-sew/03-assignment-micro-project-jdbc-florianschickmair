@@ -28,7 +28,7 @@ public class CenterManagerEndpoint {
     @Produces(MediaType.APPLICATION_JSON)
     public Employee getLinie(@PathParam("id") Long id) {
         return em.find(Employee.class, id);
-        
+
     }
 }
 
