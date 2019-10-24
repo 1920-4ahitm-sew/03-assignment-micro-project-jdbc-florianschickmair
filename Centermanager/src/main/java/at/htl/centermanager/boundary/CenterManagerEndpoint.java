@@ -11,6 +11,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
+import java.util.List;
 
 @Stateless
 @Path("/")
@@ -30,5 +31,14 @@ public class CenterManagerEndpoint {
         return em.find(Employee.class, id);
 
     }
+
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    @Path("all")
+    public List<Employee> getAll() {
+        return em.createNamedQuery("Employee.findAll", Employee.class)
+                .getResultList();
+    }
+
 }
 

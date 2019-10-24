@@ -1,7 +1,21 @@
 package at.htl.centermanager.entity;
 
+import javax.persistence.*;
+
+
+@Entity
+@NamedQueries(
+        @NamedQuery(
+                name = "Employee.findAll",
+                query = "select e from Employee e"
+        )
+)
+
+
 public class Employee {
 
+
+    @Id@GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
 

@@ -14,7 +14,8 @@ public class InitBean {
     EntityManager em;
 
     public void init(@Observes @Initialized(ApplicationScoped.class) Object init) {
-        System.out.println("*** It works! ***");
+        System.out.println("*** It works :-) ***");
+
 
         em.persist(new Employee(1,"Schickmair"));
         em.persist(new Employee(2,"Mair"));
