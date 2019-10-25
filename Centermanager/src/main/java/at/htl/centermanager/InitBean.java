@@ -7,7 +7,10 @@ import javax.enterprise.context.Initialized;
 import javax.enterprise.event.Observes;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.transaction.Transactional;
 
+@ApplicationScoped
+@Transactional
 public class InitBean {
 
     @PersistenceContext
@@ -17,7 +20,7 @@ public class InitBean {
         System.out.println("*** It works :-) ***");
 
 
-        em.persist(new Employee(1,"Schickmair"));
-        em.persist(new Employee(2,"Mair"));
+        em.persist(new Employee("Schickmair"));
+        em.persist(new Employee("Mair"));
     }
 }

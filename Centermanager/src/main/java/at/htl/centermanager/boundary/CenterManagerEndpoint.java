@@ -14,7 +14,7 @@ import javax.ws.rs.core.MediaType;
 import java.util.List;
 
 @Stateless
-@Path("employee")
+@Path("/")
 public class CenterManagerEndpoint {
 
     @PersistenceContext

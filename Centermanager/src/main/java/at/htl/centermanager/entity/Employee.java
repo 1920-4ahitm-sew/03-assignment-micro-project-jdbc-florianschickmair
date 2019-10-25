@@ -16,30 +16,28 @@ import javax.persistence.*;
 public class Employee {
 
 
-    @Id@GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     private String name;
 
     public Employee() {
 
     }
 
-    public Employee(int id, String name) {
+    public Employee(String name) {
 
-        this.id = id;
+
         this.name = name;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
     public String getName() {
         return name;
     }
-    public void setId(int id) {
-        this.id = id;
-    }
+
 
     public void setName(String name) {
         this.name = name;
