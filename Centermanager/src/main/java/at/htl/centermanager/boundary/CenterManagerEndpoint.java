@@ -14,7 +14,7 @@ import javax.ws.rs.core.MediaType;
 import java.util.List;
 
 @Stateless
-@Path("/")
+@Path("employee")
 public class CenterManagerEndpoint {
 
     @PersistenceContext
@@ -22,6 +22,7 @@ public class CenterManagerEndpoint {
 
     @PostConstruct
     public void init() {
+
         System.out.println("****  CenterManagerEP created ***");
     }
     @GET
